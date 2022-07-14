@@ -3,8 +3,10 @@ import {PublishIcon} from '@sanity/icons'
 import {Flex, Container, Heading, Text, Card, Button as SanityButton} from '@sanity/ui'
 
 export default function NetlifyDeploy() {
+  const siteID = ''
+  const siteURL = ''
   const deployNetlify = async () => {
-    await fetch('https://api.netlify.com/build_hooks/62a02b6b7d15e52aab82663f', {
+    await fetch(`https://api.netlify.com/build_hooks/${siteID}`, {
       method: 'POST',
     })
   }
@@ -16,9 +18,9 @@ export default function NetlifyDeploy() {
           <Card padding={4}>
             <Heading as="h2">Production</Heading>
             <Card paddingTop={2}>
-              <img src="https://api.netlify.com/api/v1/badges/3d435c5f-9a68-4754-a50c-cefb1221791a/deploy-status" />
+              <img src={`https://api.netlify.com/api/v1/badges/${siteID}/deploy-status`} />
             </Card>
-            <a href="https://westsidepizza.com" target="_blank" rel="noopener noreferrer">
+            <a href={siteURL} target="_blank" rel="noopener noreferrer">
               <Card paddingTop={4}>
                 <Text>View Site</Text>
               </Card>

@@ -1,6 +1,6 @@
 {
   "name": "@webmarkets/sanity-plugin-netlify-deploy",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A plugin to deploy your Netlify hosted sites from the Sanity Studio ",
   "author": "WebMarkets Digital Marketing - SEO <webmarketsonline@gmail.com>",
   "license": "MIT",
@@ -67,5 +67,8 @@
   "bugs": {
     "url": "https://github.com/Webmarkets/sanity-plugin-netlify-deploy/issues"
   },
-  "homepage": "https://github.com/Webmarkets/sanity-plugin-netlify-deploy#readme"
+  "homepage": "https://github.com/Webmarkets/sanity-plugin-netlify-deploy#readme",
+  "publishConfig": {
+    "access": "public"
+  }
 }
