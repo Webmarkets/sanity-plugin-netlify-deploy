@@ -2,13 +2,17 @@ import React from 'react'
 import {PublishIcon} from '@sanity/icons'
 import {Flex, Container, Heading, Text, Card, Button as SanityButton} from '@sanity/ui'
 
-export default function NetlifyDeploy() {
-  const siteID = ''
-  const siteURL = ''
+export default function NetlifyDeploy({config}: {config: any}) {
+  const siteID = config.siteID || ''
+  const siteURL = config.siteURL || ''
   const deployNetlify = async () => {
     await fetch(`https://api.netlify.com/build_hooks/${siteID}`, {
       method: 'POST',
     })
+  }
+
+  if (!siteID) {
+    return null
   }
 
   return (

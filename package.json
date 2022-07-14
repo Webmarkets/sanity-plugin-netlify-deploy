@@ -1,10 +1,10 @@
 {
   "name": "@webmarkets/sanity-plugin-netlify-deploy",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A plugin to deploy your Netlify hosted sites from the Sanity Studio ",
   "author": "WebMarkets Digital Marketing - SEO <webmarketsonline@gmail.com>",
   "license": "MIT",
-  "source": "./src/index.ts",
+  "source": "./src/index.tsx",
   "main": "./lib/cjs/index.js",
   "module": "./lib/esm/index.js",
   "types": "./lib/types/index.d.ts",

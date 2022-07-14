@@ -1,22 +1,24 @@
+import React from 'react'
 import {createPlugin} from 'sanity'
 import RocketIcon from './RocketIcon'
 import NetlifyDeploy from './NetlifyDeploy'
 
-interface MyPluginConfig {
-  /* nothing here yet */
+interface NetlifyDeployConfig {
+  siteID?: string
+  siteURL?: string
 }
 
-export const netlifyDeploy = createPlugin<MyPluginConfig | void>((config = {}) => {
+export const netlifyDeploy = createPlugin<NetlifyDeployConfig | void>((config = {}) => {
   return {
     tools: (prev, context) => {
       return [
         ...prev,
         {
-          name: 'sanity-plugin-testing-it-out',
+          name: 'sanity-plugin-netlify-deploy',
           tool: NetlifyDeploy,
           title: 'Deploy',
           icon: RocketIcon,
-          component: NetlifyDeploy,
+          component: () => <NetlifyDeploy config={config} />,
         },
       ]
     },
