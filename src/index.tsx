@@ -6,6 +6,7 @@ import NetlifyDeploy from './NetlifyDeploy'
 interface NetlifyDeployConfig {
   siteID?: string
   siteURL?: string
+  buildHookID?: string
 }
 
 export const netlifyDeploy = createPlugin<NetlifyDeployConfig | void>((config = {}) => {
